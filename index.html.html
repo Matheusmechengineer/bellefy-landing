@@ -1,126 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bellefy - Organize sua carreira na beleza</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-    }
-    header {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    .hero h1 {
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: #EBA7C5;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    .cta-button {
-      background: #EBA7C5;
-      color: #fff;
-      padding: 15px 35px;
-      border-radius: 40px;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-top: 25px;
-      transition: .3s;
-    }
-    .cta-button:hover {
-      opacity: .8;
-    }
-    .benefits {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    .benefits h2 {
-      color: #C7B6E4;
-      font-size: 1.8rem;
-    }
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      padding: 25px;
-      background: #fafafa;
-      border-radius: 16px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      color: #8FBCE9;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: .9rem;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellefy — Atendimento Inteligente para Profissionais de Beleza</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background-color: #0b0b0e;
+            color: #ffffff;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #bcaaff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #d9caff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #d4d4d4;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, #7b4dff, #4e2cb5);
+            padding: 14px 28px;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            color: #d9caff;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            background: #15151b;
+            border: 1px solid #27272f;
+            border-radius: 14px;
+            padding: 30px;
+            width: 300px;
+            color: #e6e6e6;
+            box-shadow: 0 0 10px rgba(123, 77, 255, 0.15);
+        }
+
+        .card h3 {
+            color: #c5b4ff;
+            margin-bottom: 15px;
+        }
+
+        .cta-final {
+            background: linear-gradient(180deg, #4e2cb5, #7b4dff);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #0a0a0d;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="LOGO.png" alt="Bellefy Logo" width="150" />
-  </header>
 
-  <section class="hero">
-    <h1>Sua carreira na beleza organizada e crescendo todos os dias ✨</h1>
-    <p>Agenda, clientes e pagamentos em um só lugar. Simples, rápido e feito para profissionais da beleza.</p>
-    <button class="cta-button">Entrar na lista VIP</button>
-  </section>
+<header>Bellefy</header>
 
-  <section class="benefits">
-    <h2>Feito para facilitar sua rotina</h2>
-    <div class="benefit-grid">
+<section class="hero">
+    <h1>Atenda Seus Clientes Mesmo Sem Estar Online</h1>
+    <p>O Bellefy automatiza mensagens no WhatsApp, agenda serviços e te ajuda a fechar mais clientes enquanto você trabalha.</p>
+    <a href="#cta" class="btn">Quero automatizar meu atendimento</a>
+</section>
 
-      <div class="card">
-        <h3>📅 Agenda Inteligente</h3>
-        <p>Organize horários, atendimentos e evite esquecimentos.</p>
-      </div>
+<section class="section">
+    <h2>Como o Bellefy te ajuda no dia a dia</h2>
 
-      <div class="card">
-        <h3>💕 Clientes</h3>
-        <p>Histórico, preferências e tudo o que importa, salvo com carinho.</p>
-      </div>
+    <div class="features">
+        <div class="card">
+            <h3>✨ Atendimento Inteligente 24h</h3>
+            <p>A IA responde suas clientes automaticamente, tira dúvidas e envia informações sobre serviços.</p>
+        </div>
 
-      <div class="card">
-        <h3>💳 Pagamentos</h3>
-        <p>Controle financeiro simples e claro para sua carreira.</p>
-      </div>
+        <div class="card">
+            <h3>📅 Organização e Agendamentos</h3>
+            <p>O Bellefy coleta dados das clientes e facilita o agendamento, deixando sua rotina mais leve.</p>
+        </div>
 
-      <div class="card">
-        <h3>📈 Crescimento</h3>
-        <p>Informações e métricas que ajudam você a faturar mais.</p>
-      </div>
-
+        <div class="card">
+            <h3>📈 Mais Clientes Fechados</h3>
+            <p>A IA faz follow-ups, envia lembretes e aumenta suas conversões mesmo enquanto você atende.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <footer>
-    Bellefy © 2025 — Plataforma para profissionais da beleza.
-  </footer>
+<section class="cta-final" id="cta">
+    <h2>Pronta para profissionalizar seu atendimento e atrair mais clientes?</h2>
+    <a href="#" class="btn" style="background:#fff; color:#4e2cb5;">Começar agora</a>
+</section>
+
+<footer>
+    Bellefy © 2025 – Todos os direitos reservados.
+</footer>
+
 </body>
 </html>

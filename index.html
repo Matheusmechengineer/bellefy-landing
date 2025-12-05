@@ -1,126 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bellefy - Organize sua carreira na beleza</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bellefy — Automatize seu atendimento</title>
+
+<style>
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #0b0b0e;
+        color: white;
     }
+
     header {
-      padding: 40px 20px;
-      text-align: center;
+        text-align: center;
+        padding: 30px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #bcaaff;
     }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
+
+    .container {
+        max-width: 420px;
+        margin: auto;
+        padding: 20px;
+        background: #15151b;
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(123, 77, 255, .2);
     }
-    .hero h1 {
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: #EBA7C5;
+
+    h2 {
+        text-align: center;
+        color: #d9caff;
+        margin-bottom: 20px;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+
+    input {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: none;
+        background: #1e1e24;
+        color: white;
+        font-size: 16px;
     }
-    .cta-button {
-      background: #EBA7C5;
-      color: #fff;
-      padding: 15px 35px;
-      border-radius: 40px;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-top: 25px;
-      transition: .3s;
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        margin-top: 10px;
+        background: linear-gradient(90deg, #7b4dff, #4e2cb5);
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
     }
-    .cta-button:hover {
-      opacity: .8;
+
+    .btn:hover {
+        opacity: 0.85;
     }
-    .benefits {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+
+    .success {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        color: #9dffb0;
+        font-size: 16px;
     }
-    .benefits h2 {
-      color: #C7B6E4;
-      font-size: 1.8rem;
-    }
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      padding: 25px;
-      background: #fafafa;
-      border-radius: 16px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      color: #8FBCE9;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: .9rem;
-      color: #777;
-    }
-  </style>
+</style>
+
 </head>
 <body>
-  <header>
-    <img src="LOGO.png" alt="Bellefy Logo" width="150" />
-  </header>
 
-  <section class="hero">
-    <h1>Sua carreira na beleza organizada e crescendo todos os dias ✨</h1>
-    <p>Agenda, clientes e pagamentos em um só lugar. Simples, rápido e feito para profissionais da beleza.</p>
-    <button class="cta-button">Entrar na lista VIP</button>
-  </section>
+<header>Bellefy</header>
 
-  <section class="benefits">
-    <h2>Feito para facilitar sua rotina</h2>
-    <div class="benefit-grid">
+<div class="container">
+    <h2>Entre para a lista de espera</h2>
 
-      <div class="card">
-        <h3>📅 Agenda Inteligente</h3>
-        <p>Organize horários, atendimentos e evite esquecimentos.</p>
-      </div>
+    <form id="leadForm">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="text" name="telefone" placeholder="Seu WhatsApp" required>
+        <button class="btn" type="submit">Quero fazer parte</button>
+    </form>
 
-      <div class="card">
-        <h3>💕 Clientes</h3>
-        <p>Histórico, preferências e tudo o que importa, salvo com carinho.</p>
-      </div>
+    <p class="success" id="successMsg">Pronto! Você está na lista 💜</p>
+</div>
 
-      <div class="card">
-        <h3>💳 Pagamentos</h3>
-        <p>Controle financeiro simples e claro para sua carreira.</p>
-      </div>
+<script>
+    document.getElementById("leadForm").addEventListener("submit", function(e) {
+        e.preventDefault();
 
-      <div class="card">
-        <h3>📈 Crescimento</h3>
-        <p>Informações e métricas que ajudam você a faturar mais.</p>
-      </div>
+        const form = new FormData(document.getElementById("leadForm"));
 
-    </div>
-  </section>
+        fetch("https://script.google.com/macros/s/AKfycbwTet49XlPNmXjUUhqqu6OsM82GwUT083u1dXkKH0xmyAfMbuHbW7BElvWrS1B5h6IQ6w/exec", {
+            method: "POST",
+            body: form
+        })
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("successMsg").style.display = "block";
+            document.getElementById("leadForm").reset();
+        })
+        .catch(err => alert("Erro ao enviar. Tente novamente."));
+    });
+</script>
 
-  <footer>
-    Bellefy © 2025 — Plataforma para profissionais da beleza.
-  </footer>
 </body>
 </html>
